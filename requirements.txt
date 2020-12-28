@@ -9,3 +9,6 @@ six
 
 #image
 Pillow
+
+#filter
+django-filter
