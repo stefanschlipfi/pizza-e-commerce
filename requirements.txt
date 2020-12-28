@@ -1,0 +1,11 @@
+IPython
+
+Django
+django-rest-framework
+
+
+#router db
+six
+
+#image
+Pillow
