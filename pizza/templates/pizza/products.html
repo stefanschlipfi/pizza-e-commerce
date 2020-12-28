@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div id="app">
+
+    <div v-for="product in products">
+        <h4> [[product.name]] </h4>
+        <p> [[product.price]]€ </p>
+        <p> [[product.category]] </p>
+    </div>
+
+</div>
+
+
+<script src="{% static 'vue/products.vue' %}"></script>
+
+{% endblock content %}

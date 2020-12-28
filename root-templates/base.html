@@ -16,13 +16,21 @@
   </head>
 <body>
 
-    
 
 
     <!-- Bootstrap JS first, then Tether, then jQuery with ajaxs -->
     <script src="{% static 'vendor/jquery.slim.js' %}" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="{% static 'vendor/bootstrap.min.js' %}" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="{% static 'vendor/ajaxs.js' %}"></script>
+    <script src="{% static 'vendor/axios.js' %}"></script>
+    <script src="{% static 'vendor/cookie.js' %}"></script>
     <script src="{% static 'vendor/vuejs.vue' %}"></script>
+
+
+    <div class="container">
+      {% block content %}
+      {% endblock content %}
+  </div>
+
+  </body>
 
 </html>
