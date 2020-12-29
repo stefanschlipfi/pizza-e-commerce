@@ -1,8 +1,9 @@
 var vueapp = new Vue({
     delimiters: ['[[', ']]'],
-    el: '#app',
+    el: '#products-vue-app',
     data: {
         products: [],
+        err_messages: [],
     },
 
     created () {

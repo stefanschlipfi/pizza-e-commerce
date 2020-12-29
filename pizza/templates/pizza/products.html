@@ -2,14 +2,26 @@
 {% block content %}
 {% load static %}
 
-<div id="app">
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
 
-    <div v-for="product in products">
-        <h4> [[product.name]] </h4>
-        <p> [[product.price]]€ </p>
-        <p> [[product.category]] </p>
-    </div>
 
+<div id="products-vue-app">
+
+    <ul class="list-group list-group-flush mt-3">
+        <li class="list-group-item product" v-for="product in products">
+            <div class="product-img"><img v-bind:src="product.image" alt="product image"></div>
+            <div class="products-detail">
+                <h4> [[product.name]] </h4>
+                <div class="product-detail-s2">
+                    <h5> [[product.price]]€ </h5>
+        
+                    <div class="products-btn">
+                        <span>Add to Card</span>
+                        <span>+</span>
+                    </div>
+                </div>
+        </li>
+    </ul>
 </div>
 
 
