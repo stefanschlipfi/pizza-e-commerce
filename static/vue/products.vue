@@ -20,7 +20,12 @@ var vueapp = new Vue({
                 this.products.push(item);
             });
         },
-
+        show_product_detail: function(product){
+            alert("Show detail: " + product.name)
+        },
+        add_to_card: function(product){
+            alert(product.name)
+        },
         show_error_message(HTTP_CODE,message){
             error = ''.concat("Code: ",HTTP_CODE,' ',message)
             this.err_messages.push(error)

@@ -8,14 +8,14 @@
 <div id="products-vue-app">
 
     <ul class="list-group list-group-flush mt-3">
-        <li class="list-group-item product" v-for="product in products">
+        <li v-on:click="show_product_detail(product)" class="list-group-item product" v-for="product in products">
             <div class="product-img"><img v-bind:src="product.image" alt="product image"></div>
             <div class="products-detail">
                 <h4> [[product.name]] </h4>
                 <div class="product-detail-s2">
                     <h5> [[product.price]]€ </h5>
         
-                    <div class="products-btn">
+                    <div v-on:click.stop="add_to_card(product)" class="products-btn">
                         <span>Add to Card</span>
                         <span>+</span>
                     </div>
