@@ -11,7 +11,7 @@ class Products(models.Model):
     CATEGORIES = (
         ('Pizza', 'Pizza'),
         ('Pasta', 'Pasta'),
-        ('Salte', 'Salate'),
+        ('Salate', 'Salate'),
     )
     category = models.CharField(max_length=10,choices=CATEGORIES)
 

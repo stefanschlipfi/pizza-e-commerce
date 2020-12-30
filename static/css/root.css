@@ -1,3 +1,34 @@
 body{
     background-color: #F3F3F3;
+    font-family: 'Roboto', sans-serif;
+}
+.neumorphism{
+    border-radius: 10px;
+    background-color: #F3F3F3;
+    box-shadow: 10px 10px 20px #E0E0E0, -10px -10px 20px #FFFFFF;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+nav{
+    margin: 0 15px 15px 15px;
+}
+.sticky-top{
+    top: 10px;
+}
+
+.navbar-brand{
+    font-size: 150%;
+    font-weight: bold;
+}
+.navbar-light .navbar-toggler{
+    color: #8A8787;
 }

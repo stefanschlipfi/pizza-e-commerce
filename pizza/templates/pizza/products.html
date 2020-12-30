@@ -7,8 +7,15 @@
 
 <div id="products-vue-app">
 
+    <div class="product-filter neumorphism mt-4">
+        <span class="material-icons">filter_list</span>
+        <select id="filter_dropdown" class="filter-dropdown">
+            <option v-for="(value,key) in filters" v-on:click="select_filter()" class="newmorphism">[[key]]</option>
+        </select>
+    </div>
+
     <ul class="list-group list-group-flush mt-3">
-        <li v-on:click="show_product_detail(product)" class="list-group-item product" v-for="product in products">
+        <li v-on:click="show_product_detail(product)" class="list-group-item product neumorphism noselect" v-for="product in products">
             <div class="product-img"><img v-bind:src="product.image" alt="product image"></div>
             <div class="products-detail">
                 <h4> [[product.name]] </h4>
@@ -17,7 +24,7 @@
         
                     <div v-on:click.stop="add_to_card(product)" class="products-btn">
                         <span>Add to Card</span>
-                        <span>+</span>
+                        <span class="material-icons">add</span>
                     </div>
                 </div>
         </li>

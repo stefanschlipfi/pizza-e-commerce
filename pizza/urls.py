@@ -17,9 +17,10 @@ Including another URLconf
 from django.urls import path,include
 
 from .api import urls as api_urls
-from .views import ProductsView
+from .views import ProductsView, BasketView
 
 urlpatterns = [
     path('api/',include(api_urls)),
-    path('products',ProductsView.as_view())
+    path('products',ProductsView.as_view(), name='products'),
+    path('basket',BasketView.as_view(), name='basket')
 ]

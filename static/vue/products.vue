@@ -4,16 +4,22 @@ var vueapp = new Vue({
     data: {
         products: [],
         err_messages: [],
+        filters: {'All':'','Pizza':'Pizza','Pasta':'Pasta','Salate':'Salate'},
+        active_filter: 'All',
+        loading: true,
     },
 
     created () {
-        this.api_call('/api/products/?format=json','GET')
-        .then(response => {
-            this.init_products(response.data)
-        })
+       this.load_products()
     },
     methods: {
 
+        load_products: function(){
+            this.api_call('/api/products/?format=json&category=' + this.filters[this.active_filter],'GET')
+            .then(response => {
+                this.init_products(response.data)
+            })
+        },
         init_products: function(event_list){
             this.products = []
             event_list.forEach(item => {
@@ -25,6 +31,11 @@ var vueapp = new Vue({
         },
         add_to_card: function(product){
             alert(product.name)
+        },
+        select_filter: function(){
+            var dropdown = document.getElementById('filter_dropdown')
+            this.active_filter = dropdown.options[dropdown.selectedIndex].text;
+            this.load_products()
         },
         show_error_message(HTTP_CODE,message){
             error = ''.concat("Code: ",HTTP_CODE,' ',message)
@@ -44,6 +55,7 @@ var vueapp = new Vue({
             return resp
         },
         async_api_call_axios: async(url,method,json_data) =>{
+            this.loading = true;
             return await axios({
                 url: url,
                 method: method,

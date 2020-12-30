@@ -1,21 +1,20 @@
-body{
-    background-color: #F3F3F3;
-    font-family: 'Roboto', sans-serif;
-}
 
 .list-group-item.product{
     border: none;
     display: flex;
     margin-bottom: 15px;
     padding: 12px 10px 10px 20px;
-    border-radius: 10px;
-    background-color: #F3F3F3;
-    box-shadow: 10px 10px 20px #E0E0E0, -10px -10px 20px #FFFFFF;
+
 }
 .product h4{
-    font-size: 20pt;
+    font-size: 150%;
     font-weight: bold;
 }
+.product h4:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .product h5{
     font-size: 18pt;
 }
@@ -40,7 +39,7 @@ body{
 .products-btn{
     display: flex;
     justify-content: space-between;
-    width: 125px;
+    width: 130px;
     cursor: pointer;
     padding: 5px 10px;
     display: flex;
@@ -59,4 +58,18 @@ body{
 .product-detail-s2{
     display: flex;
     justify-content: space-between;
+}
+.product-filter{
+    display: inline-flex;
+    width: auto;
+    padding: 5px;
+}
+
+.filter-dropdown{
+    margin-left: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;     
+    background: transparent ;  
 }
