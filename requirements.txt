@@ -3,6 +3,8 @@ IPython
 Django
 django-rest-framework
 
+#postgre
+psycopg2
 
 #router db
 six
