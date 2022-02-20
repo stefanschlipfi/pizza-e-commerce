@@ -4,7 +4,7 @@ Django
 django-rest-framework
 
 #postgre
-psycopg2
+psycopg2-binary==2.9.1
 
 #router db
 six
@@ -14,3 +14,6 @@ Pillow
 
 #filter
 django-filter
+
+#for wgsi files
+gunicorn

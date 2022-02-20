@@ -12,6 +12,7 @@ db.sqlite3
 
 # remove media
 media/*
+!media/product-images/small/small_default.png
 
 #remove migrations
 
